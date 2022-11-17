@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="emp" class="com.fj.spring5.bean.Emp">
+            <property name="ename" value="kucy"/>
+            <property name="gender" value="女"/>
+            <property name="dept">
+                <bean name="dept" class="com.fj.spring5.bean.Dept">
+                    <property name="dname" value="保安"/>
+                </bean>
+            </property>
+        </bean>
+
+</beans>

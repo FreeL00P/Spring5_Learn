@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="user" class="com.fj.spring5.User"></bean>
+        <bean id="book" class="com.fj.spring5.Book">
+                <property name="bName" value="盐焗鸡"/>
+                <property name="bAuthor" value="蔡徐坤"/>
+        </bean>
+
+        <bean name="order" class="com.fj.spring5.Orders">
+                <constructor-arg name="oName" ><null/></constructor-arg>
+                <constructor-arg name="addRess" > <value> <![CDATA[<<南京>>]]></value></constructor-arg>
+        </bean>
+        <bean id="userService" class="com.fj.spring5.service.UserService">
+                <property name="userDao" ref="userDAO"/>
+        </bean>
+        <bean id="userDAO" class="com.fj.spring5.dao.UserDaoImpl"></bean>
+</beans>
